@@ -12,6 +12,7 @@ Plugin 'benmills/vimux'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fholgado/minibufexpl.vim'
+Plugin 'jalvesaq/Nvim-R'
 
 call vundle#end()            
 filetype plugin indent on    
