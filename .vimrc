@@ -13,6 +13,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'jalvesaq/Nvim-R'
+Plugin 'ycm-core/YouCompleteMe'
 
 call vundle#end()            
 filetype plugin indent on    
@@ -24,7 +25,13 @@ set number
 set undofile
 set undodir=~/.vim/undodir
 
+let R_source = '~/dotfiles/tmux_split.vim'
+let R_in_buffer = 0
+let R_tmux_split = 1
+let vimrplugin_assign = 0
+
 let mapleader = ","
+let localleader = "\\"
 
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
@@ -33,6 +40,11 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+tnoremap <C-J> <C-W><C-J>
+tnoremap <C-K> <C-W><C-K>
+tnoremap <C-L> <C-W><C-L>
+tnoremap <C-H> <C-W><C-H>
 
 map <Leader>be :MBEOpen<CR>
 map <Leader>bc :MBEClose<CR>
