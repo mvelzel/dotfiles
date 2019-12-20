@@ -1,0 +1,124 @@
+! X Resources: Generated with Hodler (http://github.com/matttproud/hodler)
+*color0: #4a4131
+*color1: #cb712a
+*color2: #cc7c34
+*color3: #c38e45
+*color4: #767b6f
+*color5: #9fafaf
+*color6: #86a3a4
+*color7: #cad7ca
+*color8: #4b4131
+*color9: #cb712a
+*color10: #cc7c34
+*color11: #c38e45
+*color12: #767b6f
+*color13: #abbcbc
+*color14: #87a4a5
+*color15: #cad7ca
+*background: #181818
+*foreground: #767b6f
+*cursorColor: #c7c7c7
+! See "highlightColorMode" and "hm" options in XTerm manual page.
+*highlightTextColor: #000000
+*highlightColor: #c1ddff
+! No support for cursor text coloring; would be #feffff.
+! No support for bold coloring; would be #feffff.
+URxvt*font:                 xft:Terminus:regular:size=12
+URxvt*imFont:               xft:Terminus:regular:size=12 
+URxvt*boldFont:             xft:Terminus:bold:size=12
+URxvt*italicFont:           xft:Terminus:italic:size=12
+URxvt*boldItalicFont:       xft:Terminus:bold:italic:size=12
+
+! Enable the extended coloring options
+rofi.color-enabled: true
+
+! Property Name     BG       Border   Separator
+rofi.color-window:  #181818, #181818, #cb712a
+
+! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
+rofi.color-normal:  #181818, #767b6f, #181818, #181818, #fdf6e3
+rofi.color-active:  #181818, #9fafaf, #181818, #181818, #268bd2
+!lmao wth is urgent
+rofi.color-urgent:  #181818, #dc322f, #181818, #181818, #dc322f
+
+! Set the desired separator style
+rofi.separator-style: solid
+
+!!solarized
+!#define S_base03        #002b36
+!#define S_base02        #073642
+!#define S_base01        #586e75
+!#define S_base00        #657b83
+!#define S_base0         #839496
+!#define S_base1         #93a1a1
+!#define S_base2         #eee8d5
+!#define S_base3         #fdf6e3
+!
+!*background:            S_base03
+!*foreground:            S_base0
+!*fadeColor:             S_base03
+!*cursorColor:           S_base1
+!*pointerColorBackground:S_base01
+!*pointerColorForeground:S_base1
+!
+!#define S_yellow        #b58900
+!#define S_orange        #cb4b16
+!#define S_red           #dc322f
+!#define S_magenta       #d33682
+!#define S_violet        #6c71c4
+!#define S_blue          #268bd2
+!#define S_cyan          #2aa198
+!#define S_green         #859900
+!
+!! black dark/light
+!*color0:                S_base02
+!*color8:                S_base03
+!
+!!! red dark/light
+!*color1:                S_red
+!*color9:                S_orange
+!
+!!! green dark/light
+!*color2:                S_green
+!*color10:               S_base01
+!
+!!! yellow dark/light
+!*color3:                S_yellow
+!*color11:               S_base00
+!
+!!! blue dark/light
+!*color4:                S_blue
+!*color12:               S_base0
+!
+!!! magenta dark/light
+!*color5:                S_magenta
+!*color13:               S_violet
+!
+!!! cyan dark/light
+!*color6:                S_cyan
+!*color14:               S_base1
+!
+!!! white dark/light
+!*color7:                S_base2
+!*color15:               S_base3
+!
+!URxvt*font:                 xft:DejaVu Sans Mono for Powerline:regular:size=12
+!URxvt*imFont:               xft:DejaVu Sans Mono for Powerline:regular:size=12 
+!URxvt*boldFont:             xft:DejaVu Sans Mono for Powerline:bold:size=12
+!URxvt*italicFont:           xft:DejaVu Sans Mono for Powerline:italic:size=12
+!URxvt*boldItalicFont:       xft:DejaVu Sans Mono for Powerline:bold:italic:size=12
+URxvt.scrollBar: false
+!
+!! Enable the extended coloring options
+!rofi.color-enabled: true
+!
+!! Property Name     BG       Border   Separator
+!rofi.color-window:  #073642, #073642, #002b36
+!
+!! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
+!rofi.color-normal:  #073642, #93a1a1, #073642, #073642, #fdf6e3
+!rofi.color-active:  #073642, #268bd2, #073642, #073642, #268bd2
+!rofi.color-urgent:  #073642, #dc322f, #073642, #073642, #dc322f
+!
+!! Set the desired separator style
+!rofi.separator-style: solid

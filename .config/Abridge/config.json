@@ -1,0 +1,138 @@
+{
+	"diagrams": {
+		"b816d4e0-0e09-11ea-a3d6-cf840d6ed514": {
+			"_name": "Todo - Main",
+			"_entities": [
+				{
+					"_name": "User",
+					"_attributes": [
+						{
+							"_id": "d2be41c0-0e09-11ea-a3d6-cf840d6ed514",
+							"_type": "string",
+							"_defaultValue": null,
+							"_visibility": "public",
+							"_name": "username"
+						},
+						{
+							"_id": "d33b6100-0e09-11ea-a3d6-cf840d6ed514",
+							"_type": "string",
+							"_defaultValue": null,
+							"_visibility": "public",
+							"_name": "email"
+						}
+					],
+					"_associations": [
+						"c098b3c0-0e10-11ea-8494-31b0db91f351"
+					],
+					"_operations": [],
+					"_id": "bb690d20-0e09-11ea-a3d6-cf840d6ed514"
+				},
+				{
+					"_name": "Todo",
+					"_attributes": [
+						{
+							"_id": "ddeef120-0e09-11ea-a3d6-cf840d6ed514",
+							"_type": "string",
+							"_defaultValue": null,
+							"_visibility": "public",
+							"_name": "task"
+						},
+						{
+							"_id": "dfd8bfc0-0e09-11ea-a3d6-cf840d6ed514",
+							"_type": "string",
+							"_defaultValue": null,
+							"_visibility": "public",
+							"_name": "completed"
+						},
+						{
+							"_id": "e2fdcd80-0e09-11ea-a3d6-cf840d6ed514",
+							"_type": "date",
+							"_defaultValue": null,
+							"_visibility": "public",
+							"_name": "deadline"
+						}
+					],
+					"_associations": [
+						"c098b3c0-0e10-11ea-8494-31b0db91f351"
+					],
+					"_operations": [],
+					"_id": "bb819e30-0e09-11ea-a3d6-cf840d6ed514"
+				}
+			],
+			"_associations": [
+				{
+					"_id": "c098b3c0-0e10-11ea-8494-31b0db91f351",
+					"_name": "UserTodos",
+					"_associationEnd1": {
+						"_name": "",
+						"_entity": {
+							"_name": "User",
+							"_attributes": [
+								{
+									"_id": "d2be41c0-0e09-11ea-a3d6-cf840d6ed514",
+									"_type": "string",
+									"_defaultValue": null,
+									"_visibility": "public",
+									"_name": "username"
+								},
+								{
+									"_id": "d33b6100-0e09-11ea-a3d6-cf840d6ed514",
+									"_type": "string",
+									"_defaultValue": null,
+									"_visibility": "public",
+									"_name": "email"
+								}
+							],
+							"_associations": [
+								"c098b3c0-0e10-11ea-8494-31b0db91f351"
+							],
+							"_operations": [],
+							"_id": "bb690d20-0e09-11ea-a3d6-cf840d6ed514"
+						},
+						"_multiplicity": "1",
+						"_navigable": true,
+						"_aggregation": "None"
+					},
+					"_associationEnd2": {
+						"_name": "",
+						"_entity": {
+							"_name": "Todo",
+							"_attributes": [
+								{
+									"_id": "ddeef120-0e09-11ea-a3d6-cf840d6ed514",
+									"_type": "string",
+									"_defaultValue": null,
+									"_visibility": "public",
+									"_name": "task"
+								},
+								{
+									"_id": "dfd8bfc0-0e09-11ea-a3d6-cf840d6ed514",
+									"_type": "string",
+									"_defaultValue": null,
+									"_visibility": "public",
+									"_name": "completed"
+								},
+								{
+									"_id": "e2fdcd80-0e09-11ea-a3d6-cf840d6ed514",
+									"_type": "date",
+									"_defaultValue": null,
+									"_visibility": "public",
+									"_name": "deadline"
+								}
+							],
+							"_associations": [
+								"c098b3c0-0e10-11ea-8494-31b0db91f351"
+							],
+							"_operations": [],
+							"_id": "bb819e30-0e09-11ea-a3d6-cf840d6ed514"
+						},
+						"_multiplicity": "*",
+						"_navigable": true,
+						"_aggregation": "None"
+					}
+				}
+			],
+			"_id": "b816d4e0-0e09-11ea-a3d6-cf840d6ed514"
+		}
+	}
+}

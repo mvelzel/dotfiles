@@ -1,0 +1,11 @@
+set autocalc
+set numeric
+set numeric_decimal=0
+set overlap
+set xlsx_readformulas
+color "type=NORMAL fg=BLACK bg=DEFAULT_COLOR"
+color "type=WELCOME fg=BLACK bg=DEFAULT_COLOR"
+color "type=CELL_SELECTION_SC fg=WHITE bg=BLACK"
+color "type=CELL_SELECTION fg=BLACK bg=BLUE"
+color "type=MODE fg=BLACK bg=DEFAULT_COLOR"
+color "type=HEADINGS fg=DEFAULT_COLOR bg=BLACK"
