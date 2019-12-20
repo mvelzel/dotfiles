@@ -1,0 +1,809 @@
+{
+  "coc-python|/mnt/d/riag-manjaro-linux-for-wsl-0800213": {
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService": [
+      {
+        "architecture": 3,
+        "path": "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.6.8-final",
+          "major": 3,
+          "minor": 6,
+          "patch": 8,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.6.8-final"
+        },
+        "sysPrefix": "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32",
+        "fileHash": "bf2b39250d209c813d12e4530ed54814f247395f0dbb187297129317737a6791adbdda5c9e5242a4ade9ebaac314074077345dd443b330e96968c78dde3a0789",
+        "type": "PipEnv",
+        "pipEnvWorkspaceFolder": "/mnt/d/riag-manjaro-linux-for-wsl-0800213"
+      }
+    ]
+  },
+  "coc-python|global": {
+    "INTERPRETERS_CACHE_v3_CondaEnvFileService": [],
+    "INTERPRETERS_CACHE_v3_VirtualEnvService": [],
+    "INTERPRETERS_CACHE_v3_CondaEnvService": [],
+    "/usr/bin/python2.7.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.15-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 15,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.15-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "c86e88aa1653a2d61dc60518d4e6a722e8d102289028607f89da9f4dddcc4b28b2d5901706e87ef35bf1fc487bf3045431845d5b144758d6b17ecb84a54be48c"
+      },
+      "expiry": 1575996684773
+    },
+    "/usr/bin/python2.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.15-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 15,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.15-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "26949ef2dd350927b1126541cba1bf7a73436e83d2bfe97675ade6cb946aa66803fc683b25b5a9187f7f9b144b331d236e45e162238d6be7d2348199e7ebaae6"
+      },
+      "expiry": 1575996684783
+    },
+    "/usr/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.15-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 15,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.15-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "130dde39e3b3a44010afd72694c5b1d01a2fe284ffa11dc046a9b0654054dbc68b668f3b8c4f828919d0a75e0d8c708576ad12faabf1dab83cb963aa722db2b8"
+      },
+      "expiry": 1575996684791
+    },
+    "/usr/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.6.8-final",
+          "major": 3,
+          "minor": 6,
+          "patch": 8,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.6.8-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "f02e90bb0ce03a115805c29a3f9348a7e8d4433ae58aefbb9f70164302df36a09bd9a47bc14cce91fd94432167c6ac0e068c1d7e27574f9c90966765e4d68b58"
+      },
+      "expiry": 1575996684659
+    },
+    "/usr/bin/python3.6.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/usr/bin/python3.6",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.6.8-final",
+          "major": 3,
+          "minor": 6,
+          "patch": 8,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.6.8-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "41284018bd0dafa610490ec6c852fd1ff3fcb27acda81860b576f1d5dcf3f4fbe296b5b37ff14d96dac4c4cfd4e06ac24999b75dffb459ff13f2a9286c8b18ed"
+      },
+      "expiry": 1575996684738
+    },
+    "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32/bin/python3.6.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32/bin/python3.6",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.6.8-final",
+          "major": 3,
+          "minor": 6,
+          "patch": 8,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.6.8-final"
+        },
+        "sysPrefix": "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32",
+        "fileHash": "c528057e24d08f62fd2cbe4217dd01da964ddeeb2b6298270f20fa70aa29e9ae3979a0460020bfa029327bd0dec0cd0fad99b712903cae63766cc8835ffa4aec"
+      },
+      "expiry": 1571321038224
+    },
+    "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32/bin/python3.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.6.8-final",
+          "major": 3,
+          "minor": 6,
+          "patch": 8,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.6.8-final"
+        },
+        "sysPrefix": "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32",
+        "fileHash": "70eb0799b177f7efd5a58c6531fcda7c8e10c4b5596b92e7639c7136adcb235df658c13077d93c71b4fc36c896cd2cd55d55b29aeac75570974c0a220f7559c0"
+      },
+      "expiry": 1571321038239
+    },
+    "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32/bin/python.v3": {
+      "data": {
+        "architecture": 3,
+        "path": "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.6.8-final",
+          "major": 3,
+          "minor": 6,
+          "patch": 8,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.6.8-final"
+        },
+        "sysPrefix": "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32",
+        "fileHash": "bf2b39250d209c813d12e4530ed54814f247395f0dbb187297129317737a6791adbdda5c9e5242a4ade9ebaac314074077345dd443b330e96968c78dde3a0789"
+      },
+      "expiry": 1575996685244
+    },
+    "INTERPRETERS_CACHE_v3_CurrentPathService": [
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python3.6",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.6.8-final",
+          "major": 3,
+          "minor": 6,
+          "patch": 8,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.6.8-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "41284018bd0dafa610490ec6c852fd1ff3fcb27acda81860b576f1d5dcf3f4fbe296b5b37ff14d96dac4c4cfd4e06ac24999b75dffb459ff13f2a9286c8b18ed",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.6.8-final",
+          "major": 3,
+          "minor": 6,
+          "patch": 8,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.6.8-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "f02e90bb0ce03a115805c29a3f9348a7e8d4433ae58aefbb9f70164302df36a09bd9a47bc14cce91fd94432167c6ac0e068c1d7e27574f9c90966765e4d68b58",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.15-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 15,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.15-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "26949ef2dd350927b1126541cba1bf7a73436e83d2bfe97675ade6cb946aa66803fc683b25b5a9187f7f9b144b331d236e45e162238d6be7d2348199e7ebaae6",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.15-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 15,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.15-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "130dde39e3b3a44010afd72694c5b1d01a2fe284ffa11dc046a9b0654054dbc68b668f3b8c4f828919d0a75e0d8c708576ad12faabf1dab83cb963aa722db2b8",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.15-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 15,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.15-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "130dde39e3b3a44010afd72694c5b1d01a2fe284ffa11dc046a9b0654054dbc68b668f3b8c4f828919d0a75e0d8c708576ad12faabf1dab83cb963aa722db2b8",
+        "type": "Unknown"
+      }
+    ],
+    "InterpreterAutoSeletionRule-currentPath": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.6.8-final",
+        "major": 3,
+        "minor": 6,
+        "patch": 8,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.6.8-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "f02e90bb0ce03a115805c29a3f9348a7e8d4433ae58aefbb9f70164302df36a09bd9a47bc14cce91fd94432167c6ac0e068c1d7e27574f9c90966765e4d68b58",
+      "type": "Unknown",
+      "cachedEntry": true
+    },
+    "preferredGlobalPyInterpreter": {
+      "architecture": 3,
+      "path": "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32/bin/python",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.6.8-final",
+        "major": 3,
+        "minor": 6,
+        "patch": 8,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.6.8-final"
+      },
+      "sysPrefix": "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32",
+      "fileHash": "bf2b39250d209c813d12e4530ed54814f247395f0dbb187297129317737a6791adbdda5c9e5242a4ade9ebaac314074077345dd443b330e96968c78dde3a0789",
+      "type": "Unknown"
+    },
+    "INTERPRETERS_CACHE_v3_KnownPathsService": [
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.15-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 15,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.15-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "130dde39e3b3a44010afd72694c5b1d01a2fe284ffa11dc046a9b0654054dbc68b668f3b8c4f828919d0a75e0d8c708576ad12faabf1dab83cb963aa722db2b8",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.15-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 15,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.15-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "26949ef2dd350927b1126541cba1bf7a73436e83d2bfe97675ade6cb946aa66803fc683b25b5a9187f7f9b144b331d236e45e162238d6be7d2348199e7ebaae6",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.15-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 15,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.15-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "c86e88aa1653a2d61dc60518d4e6a722e8d102289028607f89da9f4dddcc4b28b2d5901706e87ef35bf1fc487bf3045431845d5b144758d6b17ecb84a54be48c",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.6.8-final",
+          "major": 3,
+          "minor": 6,
+          "patch": 8,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.6.8-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "f02e90bb0ce03a115805c29a3f9348a7e8d4433ae58aefbb9f70164302df36a09bd9a47bc14cce91fd94432167c6ac0e068c1d7e27574f9c90966765e4d68b58",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python3.6",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.6.8-final",
+          "major": 3,
+          "minor": 6,
+          "patch": 8,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.6.8-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "41284018bd0dafa610490ec6c852fd1ff3fcb27acda81860b576f1d5dcf3f4fbe296b5b37ff14d96dac4c4cfd4e06ac24999b75dffb459ff13f2a9286c8b18ed",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.15-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 15,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.15-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "130dde39e3b3a44010afd72694c5b1d01a2fe284ffa11dc046a9b0654054dbc68b668f3b8c4f828919d0a75e0d8c708576ad12faabf1dab83cb963aa722db2b8",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.15-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 15,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.15-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "26949ef2dd350927b1126541cba1bf7a73436e83d2bfe97675ade6cb946aa66803fc683b25b5a9187f7f9b144b331d236e45e162238d6be7d2348199e7ebaae6",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python2.7",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "2.7.15-final",
+          "major": 2,
+          "minor": 7,
+          "patch": 15,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "2.7.15-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "c86e88aa1653a2d61dc60518d4e6a722e8d102289028607f89da9f4dddcc4b28b2d5901706e87ef35bf1fc487bf3045431845d5b144758d6b17ecb84a54be48c",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python3",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.6.8-final",
+          "major": 3,
+          "minor": 6,
+          "patch": 8,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.6.8-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "f02e90bb0ce03a115805c29a3f9348a7e8d4433ae58aefbb9f70164302df36a09bd9a47bc14cce91fd94432167c6ac0e068c1d7e27574f9c90966765e4d68b58",
+        "type": "Unknown"
+      },
+      {
+        "architecture": 3,
+        "path": "/usr/bin/python3.6",
+        "version": {
+          "options": {
+            "loose": false,
+            "includePrerelease": false
+          },
+          "loose": false,
+          "raw": "3.6.8-final",
+          "major": 3,
+          "minor": 6,
+          "patch": 8,
+          "prerelease": [
+            "final"
+          ],
+          "build": [],
+          "version": "3.6.8-final"
+        },
+        "sysPrefix": "/usr",
+        "fileHash": "41284018bd0dafa610490ec6c852fd1ff3fcb27acda81860b576f1d5dcf3f4fbe296b5b37ff14d96dac4c4cfd4e06ac24999b75dffb459ff13f2a9286c8b18ed",
+        "type": "Unknown"
+      }
+    ],
+    "PipEnvInformation": [
+      {
+        "pythonPath": "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32/bin/python",
+        "workspaceFolder": "/mnt/d/riag-manjaro-linux-for-wsl-0800213",
+        "envName": "riag-manjaro-linux-for-wsl-0800213"
+      }
+    ],
+    "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "bf2b39250d209c813d12e4530ed54814f247395f0dbb187297129317737a6791adbdda5c9e5242a4ade9ebaac314074077345dd443b330e96968c78dde3a0789",
+        "info": {
+          "architecture": 3,
+          "path": "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.6.8-final",
+            "major": 3,
+            "minor": 6,
+            "patch": 8,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.6.8-final"
+          },
+          "sysPrefix": "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32",
+          "fileHash": "bf2b39250d209c813d12e4530ed54814f247395f0dbb187297129317737a6791adbdda5c9e5242a4ade9ebaac314074077345dd443b330e96968c78dde3a0789",
+          "type": "PipEnv",
+          "cachedEntry": true,
+          "pipEnvWorkspaceFolder": "/mnt/d/riag-manjaro-linux-for-wsl-0800213",
+          "envName": "riag-manjaro-linux-for-wsl-0800213",
+          "displayName": "Python 3.6.8 64-bit ('riag-manjaro-linux-for-wsl-0800213': pipenv)",
+          "__store": true
+        }
+      },
+      "expiry": 1575996684824
+    },
+    "/home/mvelzel/.local/share/virtualenvs/riag-manjaro-linux-for-wsl-0800213-zZamKM32/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.6.8 64-bit ('riag-manjaro-linux-for-wsl-0800213-zZamKM32': virtualenv)",
+        "hash": "bf2b39250d209c813d12e4530ed54814f247395f0dbb187297129317737a6791adbdda5c9e5242a4ade9ebaac314074077345dd443b330e96968c78dde3a0789-d8e559b6334d807217b96598918931e8"
+      },
+      "expiry": 1575996685262
+    },
+    "/usr/bin/python.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 2.7.15 64-bit",
+        "hash": "130dde39e3b3a44010afd72694c5b1d01a2fe284ffa11dc046a9b0654054dbc68b668f3b8c4f828919d0a75e0d8c708576ad12faabf1dab83cb963aa722db2b8-8540927761a99ffc682b2c4ec7372f3f"
+      },
+      "expiry": 1571321038667
+    },
+    "/usr/bin/python3.interpreter.displayName.v7": {
+      "data": {
+        "displayName": "Python 3.6.8 64-bit",
+        "hash": "f02e90bb0ce03a115805c29a3f9348a7e8d4433ae58aefbb9f70164302df36a09bd9a47bc14cce91fd94432167c6ac0e068c1d7e27574f9c90966765e4d68b58-4fc45164fdcff8e9495f305eecf5944f"
+      },
+      "expiry": 1571321038682
+    },
+    "InterpreterAutoSeletionRule-system": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.6.8-final",
+        "major": 3,
+        "minor": 6,
+        "patch": 8,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.6.8-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "f02e90bb0ce03a115805c29a3f9348a7e8d4433ae58aefbb9f70164302df36a09bd9a47bc14cce91fd94432167c6ac0e068c1d7e27574f9c90966765e4d68b58",
+      "type": "Unknown",
+      "cachedEntry": true,
+      "displayName": "Python 3.6.8 64-bit"
+    },
+    "/usr/bin/python.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "130dde39e3b3a44010afd72694c5b1d01a2fe284ffa11dc046a9b0654054dbc68b668f3b8c4f828919d0a75e0d8c708576ad12faabf1dab83cb963aa722db2b8",
+        "info": {
+          "architecture": 3,
+          "path": "/usr/bin/python",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "2.7.15-final",
+            "major": 2,
+            "minor": 7,
+            "patch": 15,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "2.7.15-final"
+          },
+          "sysPrefix": "/usr",
+          "fileHash": "130dde39e3b3a44010afd72694c5b1d01a2fe284ffa11dc046a9b0654054dbc68b668f3b8c4f828919d0a75e0d8c708576ad12faabf1dab83cb963aa722db2b8",
+          "type": "Unknown",
+          "displayName": "Python 2.7.15 64-bit"
+        }
+      },
+      "expiry": 1571321038810
+    },
+    "/usr/bin/python3.interpreter.Details.v7": {
+      "data": {
+        "fileHash": "f02e90bb0ce03a115805c29a3f9348a7e8d4433ae58aefbb9f70164302df36a09bd9a47bc14cce91fd94432167c6ac0e068c1d7e27574f9c90966765e4d68b58",
+        "info": {
+          "architecture": 3,
+          "path": "/usr/bin/python3",
+          "version": {
+            "options": {
+              "loose": false,
+              "includePrerelease": false
+            },
+            "loose": false,
+            "raw": "3.6.8-final",
+            "major": 3,
+            "minor": 6,
+            "patch": 8,
+            "prerelease": [
+              "final"
+            ],
+            "build": [],
+            "version": "3.6.8-final"
+          },
+          "sysPrefix": "/usr",
+          "fileHash": "f02e90bb0ce03a115805c29a3f9348a7e8d4433ae58aefbb9f70164302df36a09bd9a47bc14cce91fd94432167c6ac0e068c1d7e27574f9c90966765e4d68b58",
+          "type": "Unknown",
+          "displayName": "Python 3.6.8 64-bit"
+        }
+      },
+      "expiry": 1571321038844
+    },
+    "InterpreterAutoSeletionRule-cachedInterpreters": {
+      "architecture": 3,
+      "path": "/usr/bin/python3",
+      "version": {
+        "options": {
+          "loose": false,
+          "includePrerelease": false
+        },
+        "loose": false,
+        "raw": "3.6.8-final",
+        "major": 3,
+        "minor": 6,
+        "patch": 8,
+        "prerelease": [
+          "final"
+        ],
+        "build": [],
+        "version": "3.6.8-final"
+      },
+      "sysPrefix": "/usr",
+      "fileHash": "f02e90bb0ce03a115805c29a3f9348a7e8d4433ae58aefbb9f70164302df36a09bd9a47bc14cce91fd94432167c6ac0e068c1d7e27574f9c90966765e4d68b58",
+      "type": "Unknown",
+      "cachedEntry": true,
+      "displayName": "Python 3.6.8 64-bit"
+    },
+    "ProposeLSBanner": false
+  },
+  "coc-python|/mnt/c/Users/video/Documents/Gamee Hacks": {
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService": []
+  }
+}
