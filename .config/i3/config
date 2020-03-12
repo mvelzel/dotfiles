@@ -6,8 +6,8 @@
 
 ##solarized
 #exec --no-startup-id feh --bg-fill /mnt/c/Users/video/Pictures/bg3.png
-exec --no-startup-id feh --bg-fill /mnt/c/Users/video/Pictures/bg4.jpg
-exec_always --no-startup-id pkil compton ; compton --config /home/mvelzel/.config/compton/config
+exec --no-startup-id feh --bg-fill ~/dotfiles/images/bg.jpg
+exec_always --no-startup-id pkil compton ; compton --config ~/.config/compton/config
 exec_always initctl set-env --global I3SOCK=$(i3 --get-socketpath)
 exec_always --no-startup-id xrdb -load ~/.Xresources 
 ##solarized
