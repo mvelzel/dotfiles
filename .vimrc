@@ -14,8 +14,9 @@ set rtp+=~/.fzf
 call plug#begin('~/.vim/plugged')
 
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'tpope/vim-fugitive'
+"Plug 'leafgarland/typescript-vim'
+"Plug 'peitalin/vim-jsx-typescript'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 "Plug 'lervag/vimtex'
@@ -244,4 +245,4 @@ let &colorcolumn="80,".join(range(120,999),",")
 
 let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
-
+let g:livepreview_engine = 'xelatex'
