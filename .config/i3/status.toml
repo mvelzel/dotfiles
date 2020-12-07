@@ -40,7 +40,7 @@ step_width = 3
 [[block]]
 block = "battery"
 interval = 10
-device = "battery"
+device = "BAT1"
 format = "{percentage}% {time}"
 
 [[block]]
