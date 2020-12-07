@@ -8,7 +8,10 @@ alias i3-msg="i3-msg -s \$(i3 --get-socketpath)"
 alias i3bar="i3bar -s \$(i3 --get-socketpath)"
 alias nightcore="mpv --audio-pitch-correction=no --speed=1.24"
 alias lofi="figlet -t -c LoFi Hip Hop Beats ; 
-    mpv -ytdl-format 95 \"https://www.youtube.com/watch?v=hHW1oY26kxQ\" --no-video --really-quiet 2> /dev/null"
+    mpv -ytdl-format 95 \"https://www.youtube.com/watch?v=5qap5aO4i9A\" --no-video --really-quiet 2> /dev/null"
+
+alias drop_cache="sudo sh -c \"echo 3 >'/proc/sys/vm/drop_caches' && swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'\""
+alias chromium="chromium-browser --no-sandbox"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -82,7 +85,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-export DISPLAY=:0.0
+export DISPLAY=$(grep nameserver /etc/resolv.conf | awk '{print $2}'):0
 
 # User configuration
 
@@ -145,9 +148,11 @@ bindkey -v '^?' backward-delete-char
 #echo -ne '\e[5 q' # Use beam shape cursor on startup.
 #preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 #
-export PULSE_SERVER=tcp:localhost
+export PULSE_SERVER=tcp:$(grep nameserver /etc/resolv.conf | awk '{print $2}');
 
 export PATH=~/.local/bin:$PATH
+
+export PATH=~/bin:$PATH
 
 export PATH=~/.local/bin/i3cmds:$PATH
 

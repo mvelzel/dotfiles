@@ -1,33 +1,52 @@
 ! X Resources: Generated with Hodler (http://github.com/matttproud/hodler)
-*color0: #4a4131
-*color1: #cb712a
-*color2: #cc7c34
-*color3: #c38e45
-*color4: #767b6f
-*color5: #9fafaf
-*color6: #86a3a4
-*color7: #cad7ca
-*color8: #4b4131
-*color9: #cb712a
-*color10: #cc7c34
-*color11: #c38e45
-*color12: #767b6f
-*color13: #abbcbc
-*color14: #87a4a5
-*color15: #cad7ca
-*background: #181818
-*foreground: #767b6f
-*cursorColor: #c7c7c7
+! special
+! special
+*.foreground:   #767b6f
+*.background:   #181818
+*.cursorColor:  #767b6f
+
+! black
+*.color0:       #181818
+*.color8:       #322828
+
+! red
+*.color1:       #cb712a
+*.color9:       #b27649
+
+! green
+*.color2:       #cc7c34
+*.color10:      #b37f51
+
+! yellow
+*.color3:       #c38e45
+*.color11:      #aa8a5e
+
+! blue
+*.color4:       #767b6f
+*.color12:      #829569
+
+! magenta
+*.color5:       #9fafaf
+*.color13:      #6a9696
+
+! cyan
+*.color6:       #86a3a4
+*.color14:      #56898b
+
+! white
+*.color7:       #cad7ca
+*.color15:      #8dbe8d
 ! See "highlightColorMode" and "hm" options in XTerm manual page.
 *highlightTextColor: #000000
 *highlightColor: #c1ddff
 ! No support for cursor text coloring; would be #feffff.
 ! No support for bold coloring; would be #feffff.
-URxvt*font:                 xft:Terminus:regular:size=12
-URxvt*imFont:               xft:Terminus:regular:size=12 
-URxvt*boldFont:             xft:Terminus:bold:size=12
-URxvt*italicFont:           xft:Terminus:italic:size=12
-URxvt*boldItalicFont:       xft:Terminus:bold:italic:size=12
+URxvt*font:                 xft:GohuFont:regular:size=11
+URxvt*boldFont:             xft:GohuFont:bold:size=11
+URxvt*italicFont:           xft:GohuFont:italic:size=11
+URxvt*boldItalicFont:       xft:GohuFont:bold:italic:size=11
+!
+URxvt.intensityStyles: true
 
 ! Enable the extended coloring options
 rofi.color-enabled: true

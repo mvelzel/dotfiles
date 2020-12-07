@@ -5,7 +5,6 @@ set background=dark
 colorscheme desert
 filetype off                 
 set lazyredraw
-set nottyfast
 set nocursorline
 
 "Plugin Section
@@ -246,3 +245,7 @@ let &colorcolumn="80,".join(range(120,999),",")
 let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
 let g:livepreview_engine = 'xelatex'
+
+let g:coc_node_path = '/home/mvelzel/.nvm/versions/node/v13.12.0/bin/node'
+
+let g:netrw_ftp_cmd="ftp -p"
