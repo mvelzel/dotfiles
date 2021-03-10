@@ -85,7 +85,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-export DISPLAY=$(grep nameserver /etc/resolv.conf | awk '{print $2}'):0
+export DISPLAY=:0
 
 # User configuration
 
@@ -148,7 +148,7 @@ bindkey -v '^?' backward-delete-char
 #echo -ne '\e[5 q' # Use beam shape cursor on startup.
 #preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 #
-export PULSE_SERVER=tcp:$(grep nameserver /etc/resolv.conf | awk '{print $2}');
+export PULSE_SERVER=tcp:127.0.0.1;
 
 export PATH=~/.local/bin:$PATH
 
