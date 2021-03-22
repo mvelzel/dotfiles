@@ -41,10 +41,10 @@
 *highlightColor: #c1ddff
 ! No support for cursor text coloring; would be #feffff.
 ! No support for bold coloring; would be #feffff.
-URxvt*font:                 xft:GohuFont:regular:size=11
-URxvt*boldFont:             xft:GohuFont:bold:size=11
-URxvt*italicFont:           xft:GohuFont:italic:size=11
-URxvt*boldItalicFont:       xft:GohuFont:bold:italic:size=11
+URxvt*font:                 xft:GohuFont:regular:size=14
+URxvt*boldFont:             xft:GohuFont:bold:size=14
+URxvt*italicFont:           xft:GohuFont:italic:size=14
+URxvt*boldItalicFont:       xft:GohuFont:bold:italic:size=14
 !
 URxvt.intensityStyles: true
 

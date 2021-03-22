@@ -38,12 +38,6 @@ block = "sound"
 step_width = 3
 
 [[block]]
-block = "battery"
-interval = 10
-device = "BAT1"
-format = "{percentage}% {time}"
-
-[[block]]
 block = "time"
 interval = 60
 format = "%a %d/%m %R"
