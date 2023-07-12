@@ -1,22 +1,30 @@
-set nocompatible              
+set nocompatible
 set noswapfile
 syntax enable
 set background=dark
-colorscheme desert
 filetype off                 
 set lazyredraw
 set nocursorline
+set clipboard=unnamed
 
 "Plugin Section
 
 set rtp+=~/.fzf
-call plug#begin('~/.vim/plugged')
 
+call plug#begin()
+
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-repeat'
+Plug 'misaka18931/vim-afterglow-ramastered'
+Plug 'jparise/vim-graphql'
+Plug 'posva/vim-vue'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-fugitive'
 "Plug 'leafgarland/typescript-vim'
+"
 "Plug 'peitalin/vim-jsx-typescript'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'lervag/vimtex'
 "Plug 'djoshea/vim-autoread'
@@ -28,27 +36,30 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'VundleVim/Vundle.vim'
 Plug 'benmills/vimux'
 "Plug 'terryma/vim-smooth-scroll'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'scrooloose/nerdtree'
 Plug 'jalvesaq/Nvim-R'
+Plug 'tveskag/nvim-blame-line'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tpope/vim-sleuth'
 
 call plug#end()
 
-filetype plugin indent on    
+filetype plugin indent on
+colorscheme afterglow
 
 set autoread
 set wildmenu
 set wildmode=longest,full
 set noshowmode
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=0
 set expandtab
 set number
 set undofile
-set undodir=~/.vim/undodir
+set undodir=~/.config/nvim/undodir
 set t_Co=256
 set laststatus=2
 
@@ -80,14 +91,13 @@ let R_esc_term = 1
 let R_rconsole_width = winwidth(0) / 4
 let R_objbr_w = winwidth(0) / 7
 
-tnoremap <Esc> <C-W>N
-tnoremap <Esc><Esc> <C-W>N
+tnoremap <Esc><Esc> <C-\><C-N>
 set timeout timeoutlen=1000  " Default
 set ttimeout ttimeoutlen=100  " Set by defaults.vim
-tnoremap <C-h> <C-W>:TmuxNavigateLeft<CR>
-tnoremap <C-j> <C-W>:TmuxNavigateDown<CR>
-tnoremap <C-k> <C-W>:TmuxNavigateUp<CR>
-tnoremap <C-l> <C-W>:TmuxNavigateRight<CR>
+tnoremap <C-h> <C-\><C-N>:TmuxNavigateLeft<CR>
+tnoremap <C-j> <C-\><C-N>:TmuxNavigateDown<CR>
+tnoremap <C-k> <C-\><C-N>:TmuxNavigateUp<CR>
+tnoremap <C-l> <C-\><C-N>:TmuxNavigateRight<CR>
 
 let mapleader = ","
 let localleader = "\\"
@@ -96,18 +106,24 @@ map <leader>ct :tabe<CR>
 map <leader>t` :tabe<CR>`
 map <leader>t' :tabe<CR>`
 
+map <leader>z :ToggleBlameLine<CR>
+
+map <leader>sf :call CocActionAsync('format')<CR>
+
 nnoremap <silent> <leader>dt :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
-map <C-n> :NERDTreeToggle<CR>
-
 map <Leader>f :Files<CR>
+
 map <Leader>hf :Files ~<CR>
 map <Leader>g :Rg<CR>
 map <Leader>b :Buffers<CR>
 map <Leader>l :Lines<CR>
+
+nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <leader>qf  <Plug>(coc-fix-current)
 
 map <Leader>vp :VimuxPromptCommand<CR>
 
@@ -119,15 +135,31 @@ function! s:check_back_space() abort
     return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
-inoremap <silent><expr> <Tab>
-            \ pumvisible() ? "\<C-n>" :
-            \ <SID>check_back_space() ? "\<Tab>" :
-            \ coc#refresh()
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1):
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice.
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
@@ -137,22 +169,19 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call ShowDocumentation()<CR>
 
-nmap <S-CR> O<Esc>
-nmap ^[0M O<Esc>
-
-nmap <CR> o<Esc>
-
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-        execute 'h '.expand('<cword>')
-    else
-        call CocAction('doHover')
-    endif
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
 endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 set splitbelow
 set splitright
@@ -216,7 +245,6 @@ let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
 let s:palette.normal.middle = [ [ 'NONE', 'NONE', '9', 'NONE' ] ]
 let s:palette.inactive.middle = s:palette.normal.middle
 let s:palette.tabline.middle = s:palette.normal.middle
-
 set fillchars=stl:_,stlnc:_,vert:│,fold:۰,diff:·
 
 highlight folded       cterm=bold ctermbg=none ctermfg=5
@@ -230,7 +258,29 @@ highlight visual       cterm=bold ctermbg=7    ctermfg=none
 highlight user1        cterm=none ctermbg=none ctermfg=3
 highlight EndOfBuffer  ctermfg=8 ctermbg=none
 highlight ColorColumn  ctermbg=8
-highlight Terminal     ctermbg=None
+highlight Terminal     ctermbg=none
+
+let &colorcolumn="80,".join(range(120,9999),",")
+
+" Dim inactive windows using 'colorcolumn' setting
+" This tends to slow down redrawing, but is very useful.
+" Based on https://groups.google.com/d/msg/vim_use/IJU-Vk-QLJE/xz4hjPjCRBUJ
+" XXX: this will only work with lines containing text (i.e. not '~')
+function! s:DimInactiveWindows()
+  for i in range(1, tabpagewinnr(tabpagenr(), '$'))
+    let l:range = "80,".join(range(120,9999),",")
+    if i != winnr()
+      let l:range = ""
+    endif
+    call setwinvar(i, '&colorcolumn', l:range)
+  endfor
+endfunction
+augroup DimInactiveWindows
+  au!
+  au WinEnter * call s:DimInactiveWindows()
+  au WinEnter * set cursorline
+  au WinLeave * set nocursorline
+augroup END
 
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
@@ -241,12 +291,49 @@ let b:ale_fixers = {
 
 set tags=./tags;,tags;
 
-let &colorcolumn="80,".join(range(120,999),",")
-
 let g:tex_flavor = 'latex'
 let g:vimtex_view_method = 'zathura'
 let g:livepreview_engine = 'xelatex'
 
-let g:coc_node_path = '/home/mvelzel/.nvm/versions/node/v13.12.0/bin/node'
-
 let g:netrw_ftp_cmd="ftp -p"
+
+fu! SaveSess()
+    execute 'mksession! ' . getcwd() . '/.session.vim'
+endfunction
+
+fu! RestoreSess()
+if filereadable(getcwd() . '/.session.vim')
+    execute 'so ' . getcwd() . '/.session.vim'
+    if bufexists(1)
+        for l in range(1, bufnr('$'))
+            if bufwinnr(l) == -1
+                exec 'sbuffer ' . l
+            endif
+        endfor
+    endif
+endif
+endfunction
+
+autocmd VimLeave * call SaveSess()
+autocmd VimEnter * nested call RestoreSess()
+
+" returns true iff is NERDTree open/active
+function! IsNTOpen()        
+  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+endfunction
+
+" calls NERDTreeFind iff NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
+function! OpenTree()
+  if &modifiable && strlen(expand('%')) > 0 && !&diff
+    if IsNTOpen()
+      :NERDTreeClose
+    else
+      :NERDTreeFind
+    endif
+  else
+    :NERDTreeToggle
+  endif
+endfunction
+
+map <C-n> :call OpenTree()<CR>
+
