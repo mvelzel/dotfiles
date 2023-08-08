@@ -6,6 +6,7 @@ return {
                 ensure_installed = "all",
                 highlight = {
                     enable = true,
+                    disable = { "sql" },
                 },
                 indent = {
                     enable = true
@@ -14,8 +15,6 @@ return {
                     enable = true,
                 },
             })
-
-            vim.treesitter.query.set("sql", "injections", "")
         end
     }
 }

@@ -56,14 +56,28 @@ return {
                     { name = 'luasnip' },
                     { name = 'nvim_lsp_signature_help' },
                 }, {
-                    { name = 'buffer' },
+                    {
+                        name = 'buffer',
+                        option = {
+                            get_bufnrs = function()
+                                -- test
+                                local bufs = {}
+                                for _, win in ipairs(vim.api.nvim_list_wins()) do
+                                    bufs[vim.api.nvim_win_get_buf(win)] = true
+                                end
+                                return vim.tbl_keys(bufs)
+                            end
+                        }
+                    },
                 }),
             })
 
             cmp.setup.cmdline({ '/', '?' }, {
                 mapping = cmp.mapping.preset.cmdline(),
                 sources = {
-                    { name = 'buffer' }
+                    {
+                        name = 'buffer',
+                    }
                 }
             })
 
