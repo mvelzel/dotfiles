@@ -2,13 +2,14 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/mvelzel/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 alias i3-msg="i3-msg -s \$(i3 --get-socketpath)"
 alias i3bar="i3bar -s \$(i3 --get-socketpath)"
 alias nightcore="mpv --audio-pitch-correction=no --speed=1.24"
 alias lofi="figlet -t -c LoFi Hip Hop Beats ; 
     mpv -ytdl-format 95 \"https://www.youtube.com/watch?v=5qap5aO4i9A\" --no-video --really-quiet 2> /dev/null"
+alias tmux="TERM=xterm-256color tmux"
 
 alias drop_cache="sudo sh -c \"echo 3 >'/proc/sys/vm/drop_caches' && swapoff -a && swapon -a && printf '\n%s\n' 'Ram-cache and Swap Cleared'\""
 alias chromium="chromium-browser --no-sandbox"
@@ -160,8 +161,8 @@ export PATH=~/qtchan/build:$PATH
 
 export PATH=~/.nvm/versions/node/v12.11.0/bin:$PATH
 
-export CTF_ROOT="/home/mvelzel/sec-tools" # DO NOT EDIT This is added by sec-tools
-export PATH="/home/mvelzel/sec-tools/bin:/home/mvelzel/sec-tools:$PATH" # DO NOT EDIT This is added by sec-tools
+export CTF_ROOT="$HOME/sec-tools" # DO NOT EDIT This is added by sec-tools
+export PATH="$HOME/sec-tools/bin:/home/mvelzel/sec-tools:$PATH" # DO NOT EDIT This is added by sec-tools
 
 nvm() {
     unset -f nvm
@@ -189,7 +190,7 @@ unsetopt BEEP
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 #
 #
-eval `dircolors ~/.dir_colors`
+#eval `dircolors ~/.dir_colors`
 
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 
@@ -211,3 +212,7 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden'
 export LD_LIBRARY_PATH=/usr/local/lib
 
 unsetopt AUTO_CD
+
+. "$HOME/.cargo/env"
+
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"

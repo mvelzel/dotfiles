@@ -82,10 +82,11 @@ vim.api.nvim_create_autocmd("VimEnter", {
     callback = function()
         local buf_modified = vim.api.nvim_buf_get_option(0, "modified")
         if not buf_modified then
-            if vim.fn.argc() == 0 and vim.fn.filereadable("Session.vim") then
+            if vim.fn.argc() == 0 and vim.fn.filereadable("Session.vim") == 1 then
                 vim.cmd("source Session.vim")
                 vim.notify("Existing session sourced, recording session")
-            elseif vim.fn.empty(vim.v.this_session) then
+            elseif vim.fn.argc() == 0 and vim.fn.empty(vim.v.this_session) then
+                vim.notify("Found no file")
                 vim.cmd("Obsession")
                 vim.notify("Started new session")
             end
