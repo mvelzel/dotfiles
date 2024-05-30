@@ -58,7 +58,7 @@ vim.api.nvim_create_autocmd("WinEnter", {
 })
 
 vim.api.nvim_create_augroup("NumberToggle", {})
-vim.api.nvim_create_autocmd("BufEnter,FocusGained,InsertLeave", {
+vim.api.nvim_create_autocmd({"BufEnter", "FocusGained", "InsertLeave"}, {
     group = "NumberToggle",
     callback = function()
         if vim.wo.number then
@@ -67,7 +67,7 @@ vim.api.nvim_create_autocmd("BufEnter,FocusGained,InsertLeave", {
     end,
     desc = "Enable relativenumber for active buffers in normal mode"
 })
-vim.api.nvim_create_autocmd("BufLeave,FocusLost,InsertEnter", {
+vim.api.nvim_create_autocmd({"BufLeave", "FocusLost", "InsertEnter"}, {
     group = "NumberToggle",
     callback = function()
         vim.wo.relativenumber = false
