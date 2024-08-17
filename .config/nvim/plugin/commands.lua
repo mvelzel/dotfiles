@@ -58,7 +58,7 @@ vim.api.nvim_create_autocmd("WinEnter", {
 })
 
 vim.api.nvim_create_augroup("NumberToggle", {})
-vim.api.nvim_create_autocmd("BufEnter,FocusGained,InsertLeave", {
+vim.api.nvim_create_autocmd({"BufEnter", "FocusGained", "InsertLeave"}, {
     group = "NumberToggle",
     callback = function()
         if vim.wo.number then
@@ -67,7 +67,7 @@ vim.api.nvim_create_autocmd("BufEnter,FocusGained,InsertLeave", {
     end,
     desc = "Enable relativenumber for active buffers in normal mode"
 })
-vim.api.nvim_create_autocmd("BufLeave,FocusLost,InsertEnter", {
+vim.api.nvim_create_autocmd({"BufLeave", "FocusLost", "InsertEnter"}, {
     group = "NumberToggle",
     callback = function()
         vim.wo.relativenumber = false
@@ -89,10 +89,11 @@ vim.api.nvim_create_autocmd("VimEnter", {
     callback = function()
         local buf_modified = vim.api.nvim_buf_get_option(0, "modified")
         if not buf_modified then
-            if vim.fn.argc() == 0 and vim.fn.filereadable("Session.vim") then
+            if vim.fn.argc() == 0 and vim.fn.filereadable("Session.vim") == 1 then
                 vim.cmd("source Session.vim")
                 vim.notify("Existing session sourced, recording session")
-            elseif vim.fn.empty(vim.v.this_session) then
+            elseif vim.fn.argc() == 0 and vim.fn.empty(vim.v.this_session) then
+                vim.notify("Found no file")
                 vim.cmd("Obsession")
                 vim.notify("Started new session")
             end

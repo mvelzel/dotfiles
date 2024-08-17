@@ -20,6 +20,7 @@ return {
                         luasnip.lsp_expand(args.body)
                     end,
                 },
+                preselect = cmp.PreselectMode.None,
                 window = {
                     completion = cmp.config.window.bordered(),
                     documentation = cmp.config.window.bordered(),
@@ -30,7 +31,7 @@ return {
                     ['<C-Space>'] = cmp.mapping.complete(),
                     ['<CR>'] = cmp.mapping.confirm {
                         behavior = cmp.ConfirmBehavior.Replace,
-                        select = true,
+                        select = false,
                     },
                     ['<Tab>'] = cmp.mapping(function(fallback)
                         if cmp.visible() then
