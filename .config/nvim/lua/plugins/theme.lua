@@ -5,11 +5,13 @@ return {
         priority = 1000,
         lazy = false,
         config = function()
-            local mocha = require("catppuccin.palettes").get_palette("mocha")
+            local mocha = require("catppuccin.palettes").get_palette("latte")
             vim.api.nvim_set_hl(0, "VertSplit", { fg = mocha.surface1 })
             vim.api.nvim_set_hl(0, "WinSeparator", { fg = mocha.surface1 })
             vim.api.nvim_set_hl(0, "LineNr", { fg = mocha.surface1 })
             vim.api.nvim_set_hl(1, "LineNr", { fg = mocha.surface3 })
+
+            vim.cmd.colorscheme("catppuccin-latte")
         end
     },
     {
@@ -22,8 +24,8 @@ return {
         priority = 1000,
         config = function()
             local lualine = require("lualine")
-            local custom_theme = require("lualine.themes.catppuccin-mocha")
-            local mocha = require("catppuccin.palettes").get_palette("mocha")
+            local custom_theme = require("lualine.themes.catppuccin-latte")
+            local mocha = require("catppuccin.palettes").get_palette("latte")
 
             custom_theme.normal.c.bg = "None"
             custom_theme.inactive.c.bg = "None"
@@ -59,12 +61,14 @@ return {
     },
     {
         "akinsho/bufferline.nvim",
+        after = "catppuccin/nvim",
         dependencies = {
             "nvim-tree/nvim-web-devicons",
             "catppuccin/nvim",
         },
         config = function()
             vim.opt.termguicolors = true
+            local mocha = require("catppuccin.palettes").get_palette("latte")
             require("bufferline").setup({
                 highlights = require("catppuccin.groups.integrations.bufferline").get(),
                 options = {

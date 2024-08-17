@@ -75,6 +75,13 @@ vim.api.nvim_create_autocmd("BufLeave,FocusLost,InsertEnter", {
     desc = "Disable relativenumber for non-active buffers or insert mode"
 })
 
+vim.api.nvim_create_autocmd({ "BufEnter", "BufFilePost" }, {
+    pattern = { "*.webppl", "*.wppl" },
+    callback = function()
+        vim.cmd("set filetype=javascript")
+    end
+})
+
 vim.api.nvim_create_augroup("ObsessionGroup", {})
 vim.api.nvim_create_autocmd("VimEnter", {
     group = "ObsessionGroup",

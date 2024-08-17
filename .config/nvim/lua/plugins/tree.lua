@@ -6,7 +6,7 @@ return {
             "catppuccin/nvim"
         },
         config = function()
-            local mocha = require("catppuccin.palettes").get_palette("mocha")
+            local mocha = require("catppuccin.palettes").get_palette("latte")
 
             vim.g.loaded_netrw = 1
             vim.g.loaded_netrwPlugin = 1
