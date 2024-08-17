@@ -158,8 +158,6 @@ export PATH=~/.local/bin/i3cmds:$PATH
 
 export PATH=~/qtchan/build:$PATH
 
-export PATH=~/.nvm/versions/node/v12.11.0/bin:$PATH
-
 export CTF_ROOT="/home/mvelzel/sec-tools" # DO NOT EDIT This is added by sec-tools
 export PATH="/home/mvelzel/sec-tools/bin:/home/mvelzel/sec-tools:$PATH" # DO NOT EDIT This is added by sec-tools
 
@@ -210,4 +208,27 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
 export LD_LIBRARY_PATH=/usr/local/lib
 
+export FLYCTL_INSTALL="/home/mvelzel/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
 unsetopt AUTO_CD
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=1000
+setopt SHARE_HISTORY
+
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
+
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export ANDROID_HOME=/home/mvelzel/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
+export ADB_SERVER_SOCKET=tcp:$WSL_HOST:5037
