@@ -238,3 +238,5 @@ export ADB_SERVER_SOCKET=tcp:$WSL_HOST:5037
 . "$HOME/.cargo/env"
 
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+
+export PATH="/home/mvelzel/go/bin:$PATH"
