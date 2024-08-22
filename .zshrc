@@ -80,7 +80,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    vi-mode
+    zsh-vi-mode
     zsh-syntax-highlighting
 )
 
@@ -240,3 +240,5 @@ export ADB_SERVER_SOCKET=tcp:$WSL_HOST:5037
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 
 export PATH="/home/mvelzel/go/bin:$PATH"
+
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk

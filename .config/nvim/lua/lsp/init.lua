@@ -14,6 +14,7 @@ local on_attach = function(_, bufnr)
     vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
     vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
     vim.keymap.set({ "n", "v" }, "<leader>ac", vim.lsp.buf.code_action, opts)
+    vim.keymap.set({ "n", "v" }, "<leader>cl", vim.lsp.codelens.run, opts)
     vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
     vim.keymap.set("n", "<leader>sf", function()
         vim.lsp.buf.format { async = true }
@@ -21,11 +22,12 @@ local on_attach = function(_, bufnr)
 end
 
 local function make_config()
-	local capabilities = require("cmp_nvim_lsp").default_capabilities()
-	return {
-		capabilities = capabilities,
-		on_attach = on_attach,
-	}
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+    return {
+        capabilities = capabilities,
+        on_attach = on_attach,
+    }
 end
 
 return {
