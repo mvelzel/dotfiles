@@ -48,7 +48,7 @@ return {
             for _, file in ipairs(vim.fn.readdir(vim.fn.stdpath("config") .. "/lua/lsp/servers", [[v:val =~ '\.lua$']])) do
                 local conf = require("lsp.servers." .. file:gsub("%.lua$", ""))
 
-                if conf.enable then
+                if not conf.disable then
                     -- Prevent the deprecation warning for sqls
                     local vim_deprecate = vim.deprecate
                     if conf.name == "sqls" then
@@ -76,7 +76,7 @@ return {
 
             elixir.setup {
                 nextls = {
-                    enable = true,
+                    enable = false,
                     cmd = "/home/mvelzel/.local/share/nvim/mason/bin/nextls"
                 },
                 elixirls = {
@@ -93,7 +93,8 @@ return {
                         vim.keymap.set("n", "<leader>tp", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
                         vim.keymap.set("v", "<leader>em", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
 
-                        vim.keymap.set("n", "<localleader>t", ":Mix test --cover<CR>", opts)
+                        vim.keymap.set("n", "<localleader>ct", ":Mix test --cover<CR>", opts)
+                        vim.keymap.set("n", "<localleader>t", ":Mix test<CR>", opts)
                     end,
                 },
                 projectionist = {

@@ -1,6 +1,6 @@
 local elixirls = {
     name = "elixirls",
-    enable = false
+    disable = true
 }
 
 function elixirls.setup(config)
