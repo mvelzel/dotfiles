@@ -225,16 +225,27 @@ setopt SHARE_HISTORY
 . "$HOME/.asdf/completions/asdf.bash"
 
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-export ANDROID_HOME=/home/mvelzel/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# For this to work, you must first install the Linux SDKs properly and then run
+# sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
+# yes | sdkmanager --licenses
+# Afterwards you must copy the adb.exe and emulator.exe in their respective folders to adb and emulator
+# Basically strip them of their extension
+# Then these paths work
+
+export ANDROID_HOME=/mnt/c/Users/mvelz/AppData/Local/Android/Sdk
+export PATH=$PATH:/mnt/c/Users/mvelz/AppData/Local/Android/Sdk/platform-tools
+export PATH=$PATH:/mnt/c/Users/mvelz/AppData/Local/Android/Sdk/emulator
+
+#export ANDROID_HOME=/home/mvelzel/Android/Sdk
+#export PATH=$PATH:$ANDROID_HOME/platform-tools
+#export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+#export PATH=$PATH:$ANDROID_HOME/emulator
+#export PATH=$PATH:$ANDROID_HOME/tools
+#export PATH=$PATH:$ANDROID_HOME/tools/bin
 
 export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
-export ADB_SERVER_SOCKET=tcp:$WSL_HOST:5037
+#export ADB_SERVER_SOCKET=tcp:$WSL_HOST:5037
 . "$HOME/.cargo/env"
 
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
