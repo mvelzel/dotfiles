@@ -77,11 +77,11 @@ return {
             elixir.setup {
                 nextls = {
                     enable = false,
-                    cmd = "/home/mvelzel/.local/share/nvim/mason/bin/nextls"
+                    cmd = "/home/m.velzel/.local/share/nvim/mason/bin/nextls"
                 },
                 elixirls = {
                     enable = true,
-                    cmd = "/home/mvelzel/.local/share/nvim/mason/bin/elixir-ls",
+                    cmd = "/home/m.velzel/.local/share/nvim/mason/bin/elixir-ls",
                     settings = elixirls.settings {
                         dialyzerEnabled = false,
                         enableTestLenses = true,
@@ -89,9 +89,12 @@ return {
                     on_attach = function(client, bufnr)
                         config.on_attach(client, bufnr)
 
-                        vim.keymap.set("n", "<leader>fp", ":ElixirFromPipe<cr>", { buffer = true, noremap = true })
-                        vim.keymap.set("n", "<leader>tp", ":ElixirToPipe<cr>", { buffer = true, noremap = true })
-                        vim.keymap.set("v", "<leader>em", ":ElixirExpandMacro<cr>", { buffer = true, noremap = true })
+                        local opts = { buffer = true, noremap = true }
+
+                        vim.keymap.set("n", "<leader>fp", ":ElixirFromPipe<cr>", opts)
+                        vim.keymap.set("n", "<leader>tp", ":ElixirToPipe<cr>", opts)
+                        vim.keymap.set("v", "<leader>em", ":ElixirExpandMacro<cr>", opts)
+                        vim.keymap.set("n", "<leader>rt", ":execute 'Mix test ' . expand('%') . ':' . line('.')<cr>", opts)
 
                         vim.keymap.set("n", "<localleader>ct", ":Mix test --cover<CR>", opts)
                         vim.keymap.set("n", "<localleader>t", ":Mix test<CR>", opts)

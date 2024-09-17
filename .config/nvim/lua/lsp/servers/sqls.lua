@@ -1,5 +1,6 @@
 local sqls = {
-    name = "sqls"
+    name = "sqls",
+    disable = true
 }
 
 local query_time = ""

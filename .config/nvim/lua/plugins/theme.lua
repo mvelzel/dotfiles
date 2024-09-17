@@ -12,6 +12,10 @@ return {
             vim.api.nvim_set_hl(1, "LineNr", { fg = mocha.surface3 })
 
             vim.cmd.colorscheme("catppuccin-latte")
+
+            require("catppuccin").setup({
+                transparent_background = false
+            })
         end
     },
     {

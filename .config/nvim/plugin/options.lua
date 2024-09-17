@@ -5,6 +5,8 @@ vim.opt.signcolumn = "yes"
 vim.opt.fillchars = [[eob: ,stl:―,stlnc:―,vert:│,fold:۰,diff:·]]
 vim.opt.termguicolors = true
 --vim.opt.showmode = false
+--
+vim.opt.shell = "/bin/zsh"
 
 vim.opt.lazyredraw = true
 vim.opt.autoread = true
