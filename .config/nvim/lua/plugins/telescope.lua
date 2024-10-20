@@ -14,6 +14,11 @@ return {
             telescope.setup({
                 defaults = {
                     file_ignore_patterns = { ".git/", "node_modules/", "vendor/", ".terraform/" },
+                    mappings = {
+                        n = {
+                            ['dd'] = require('telescope.actions').delete_buffer
+                        }
+                    },
                 },
                 extensions = {
                     fzf = {
