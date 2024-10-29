@@ -1,5 +1,6 @@
 local on_attach = function(_, bufnr)
     local opts = { buffer = bufnr, noremap = true, silent = true }
+    local builtin = require('telescope.builtin')
     vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
     vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
@@ -15,7 +16,8 @@ local on_attach = function(_, bufnr)
     vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
     vim.keymap.set({ "n", "v" }, "<leader>ac", vim.lsp.buf.code_action, opts)
     vim.keymap.set({ "n", "v" }, "<leader>cl", vim.lsp.codelens.run, opts)
-    vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+    --vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+    vim.keymap.set("n", "gr", builtin.lsp_references, opts)
     vim.keymap.set("n", "<leader>sf", function()
         vim.lsp.buf.format { async = true }
     end, opts)

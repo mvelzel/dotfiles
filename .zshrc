@@ -86,7 +86,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-export DISPLAY=:0
+#export DISPLAY=:0
+export DISPLAY=:1
 
 # User configuration
 
@@ -252,5 +253,6 @@ export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="/home/mvelzel/go/bin:$PATH"
+export PATH="/opt/PhpStorm-241.18034.69/bin/":$PATH
 
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
