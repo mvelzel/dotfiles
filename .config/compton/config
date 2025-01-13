@@ -10,6 +10,8 @@ shadow-offset-y = -7;
 # Opacity
 opacity-rule = [
     "99:class_g = 'firefox'",
+    "99:class_g = 'zen-alpha'",
+    "99:class_g = 'Navigator'",
     "99:class_g = 'Slack'",
     "99:class_g = '1Password'",
     "99:class_g = 'jetbrains-phpstorm'"

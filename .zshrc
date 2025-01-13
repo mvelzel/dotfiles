@@ -253,6 +253,8 @@ export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="/home/mvelzel/go/bin:$PATH"
-export PATH="/opt/PhpStorm-241.18034.69/bin/":$PATH
+export PATH="/opt/PhpStorm-241.18034.69/bin/:$PATH"
+
+export PATH="$HOME/.local/share/AppImage/:$PATH"
 
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
