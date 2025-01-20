@@ -11,6 +11,7 @@ shadow-offset-y = -7;
 opacity-rule = [
     "99:class_g = 'firefox'",
     "99:class_g = 'zen-alpha'",
+    "99:class_g = 'zen'",
     "99:class_g = 'Navigator'",
     "99:class_g = 'Slack'",
     "99:class_g = '1Password'",
