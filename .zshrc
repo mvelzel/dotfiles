@@ -222,8 +222,10 @@ HISTSIZE=10000
 SAVEHIST=1000
 setopt SHARE_HISTORY
 
-. "$HOME/.asdf/asdf.sh"
-. "$HOME/.asdf/completions/asdf.bash"
+if [ -d "$HOME/.asdf/" ]; then
+    . "$HOME/.asdf/asdf.sh"
+    . "$HOME/.asdf/completions/asdf.bash"
+fi
 
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 
@@ -247,7 +249,8 @@ export PATH=$PATH:/mnt/c/Users/mvelz/AppData/Local/Android/Sdk/emulator
 
 export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
 #export ADB_SERVER_SOCKET=tcp:$WSL_HOST:5037
-. "$HOME/.cargo/env"
+#
+[ -f "$HOME/.cargo/env ] && . "$HOME/.cargo/env"
 
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
