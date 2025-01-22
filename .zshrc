@@ -250,7 +250,7 @@ export PATH=$PATH:/mnt/c/Users/mvelz/AppData/Local/Android/Sdk/emulator
 export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
 #export ADB_SERVER_SOCKET=tcp:$WSL_HOST:5037
 #
-[ -f "$HOME/.cargo/env ] && . "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
