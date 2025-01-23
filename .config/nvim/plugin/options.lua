@@ -20,3 +20,7 @@ vim.opt.shiftwidth = 0
 vim.opt.expandtab = true
 
 vim.opt.shell = "/bin/zsh"
+
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldenable = false
