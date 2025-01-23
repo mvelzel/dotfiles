@@ -227,7 +227,8 @@ if [ -d "$HOME/.asdf/" ]; then
     . "$HOME/.asdf/completions/asdf.bash"
 fi
 
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+[ -d "/usr/lib/jvm/java-17-openjdk-amd64" ] && export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+[ -d "/opt/homebrew/opt/openjdk@17/" ] && export JAVA_HOME="/opt/homebrew/opt/openjdk@17/"
 
 # For this to work, you must first install the Linux SDKs properly and then run
 # sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
@@ -261,3 +262,5 @@ export PATH="/opt/PhpStorm-241.18034.69/bin/:$PATH"
 export PATH="$HOME/.local/share/AppImage/:$PATH"
 
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+
+[ -d "/opt/homebrew/opt/openjdk@17" ] && export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"

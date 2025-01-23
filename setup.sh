@@ -19,6 +19,9 @@ git clone git@github.com:mvelzel/dotfiles.git
 ls -s $HOME/dotfiles/.global_gitignore $HOME/.gitignore
 git config --global core.excludesFile '~/.gitignore'
 
+# Install asdf
+git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.15.0
+
 # Setup zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 rm $HOME/.zshrc ; ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
