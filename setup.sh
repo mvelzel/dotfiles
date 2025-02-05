@@ -21,6 +21,7 @@ git config --global core.excludesFile '~/.gitignore'
 
 # Install asdf
 git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.15.0
+ln -s $HOME/dotfiles/.asdfrc $HOME/.asdfrc
 
 # Setup zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -31,6 +32,10 @@ source $HOME/.zshrc
 
 # Install Homebrew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install java
+brew install openjdk@17
+sudo ln -sfn /opt/homebrew/opt/openjdk@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
 
 # Setup tmux
 brew install tmux

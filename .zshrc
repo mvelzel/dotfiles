@@ -264,3 +264,5 @@ export PATH="$HOME/.local/share/AppImage/:$PATH"
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
 [ -d "/opt/homebrew/opt/openjdk@17" ] && export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+#[ -d "/opt/homebrew/opt/postgresql@14" ] && export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
+[ -d "/opt/homebrew/opt/postgresql@16" ] && export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
