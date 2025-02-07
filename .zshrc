@@ -266,3 +266,11 @@ ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 [ -d "/opt/homebrew/opt/openjdk@17" ] && export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 #[ -d "/opt/homebrew/opt/postgresql@14" ] && export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
 [ -d "/opt/homebrew/opt/postgresql@16" ] && export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/mvelzel/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

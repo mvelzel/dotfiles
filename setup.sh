@@ -22,6 +22,7 @@ git config --global core.excludesFile '~/.gitignore'
 # Install asdf
 git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.15.0
 ln -s $HOME/dotfiles/.asdfrc $HOME/.asdfrc
+ln -s $HOME/dotfiles/.tool-versions $HOME/.tool-versions
 
 # Setup zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -53,3 +54,6 @@ ln -s $HOME/dotfiles/.config/lazygit $HOME/.config/lazygit
 brew install ripgrep
 brew install neovim
 ln -s $HOME/dotfiles/.config/nvim $HOME/.config/nvim
+
+# Install LinearMouse
+brew install --cask linearmouse
