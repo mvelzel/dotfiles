@@ -142,5 +142,27 @@ return {
                 group = nvim_metals_group,
             })
         end
+    },
+    {
+        "esmuellert/nvim-eslint",
+        lazy = false,
+        config = function()
+            require("nvim-eslint").setup({})
+        end
+    },
+    {
+        "nvimtools/none-ls.nvim",
+        lazy = false,
+        config = function()
+            local null_ls = require("null-ls")
+            local sources = { null_ls.builtins.formatting.prettierd }
+
+            null_ls.setup({
+                sources = sources
+            })
+        end,
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
     }
 }
