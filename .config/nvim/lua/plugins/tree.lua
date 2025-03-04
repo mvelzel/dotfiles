@@ -1,6 +1,7 @@
 return {
     {
         "kyazdani42/nvim-tree.lua",
+        enabled = false,
         dependencies = {
             "nvim-tree/nvim-web-devicons",
             "catppuccin/nvim"
@@ -57,7 +58,19 @@ return {
             vim.api.nvim_set_hl(0, "NvimTreeNormalFloat", { bg = "NONE" })
             vim.api.nvim_set_hl(0, "NvimTreeWinSeparator", { fg = mocha.surface1 })
 
-            vim.keymap.set("n", "<C-n>", ":NvimTreeFindFileToggle<CR>", { silent = true, noremap = true })
+            --vim.keymap.set("n", "<C-n>", ":NvimTreeFindFileToggle<CR>", { silent = true, noremap = true })
+        end
+    },
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        lazy = false,
+        config = function()
+            require("oil").setup()
+
+            --vim.keymap.set("n", "<C-n>", "<CMD>Oil<CR>", { silent = true, noremap = true })
+            vim.keymap.set("n", "-", "<CMD>Oil<CR>", { silent = true, noremap = true })
         end
     }
 }

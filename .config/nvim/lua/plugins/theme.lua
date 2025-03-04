@@ -142,5 +142,17 @@ return {
             })
             devicons.set_default_icon("?", "#6d8086", 66)
         end
-    }
+    },
+    {
+        "catgoose/nvim-colorizer.lua",
+        opts = {
+            user_default_options = {
+                tailwind = "lsp",
+            },
+            filetypes = {
+                "*", -- Highlight all files, but customize some others.
+                cmp_docs = { always_update = true },
+            },
+        }
+    },
 }
