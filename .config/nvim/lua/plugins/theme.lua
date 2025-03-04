@@ -147,11 +147,15 @@ return {
         "catgoose/nvim-colorizer.lua",
         opts = {
             user_default_options = {
-                tailwind = "lsp",
+                tailwind = "both",
+                tailwind_opts = {
+                    update_names = true
+                }
             },
             filetypes = {
                 "*", -- Highlight all files, but customize some others.
                 cmp_docs = { always_update = true },
+                cmp_menu = { always_update = true },
             },
         }
     },
