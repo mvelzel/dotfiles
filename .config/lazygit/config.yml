@@ -23,7 +23,7 @@ gui:
   authorColors:
     '*': '#7287fd'
 
-  nerdFontsVersion: '2'
+  nerdFontsVersion: '3'
   border: 'rounded'
 git:
   paging:
