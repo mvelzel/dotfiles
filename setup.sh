@@ -48,6 +48,7 @@ git clone -b v2.1.2 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugin
 
 # Setup lazygit
 brew install lazygit
+brew install git-delta
 ln -s $HOME/dotfiles/.config/lazygit $HOME/.config/lazygit
 
 # Setup neovim and dependencies
