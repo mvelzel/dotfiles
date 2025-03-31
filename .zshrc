@@ -269,6 +269,8 @@ ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
 [ -d "/opt/homebrew/opt/make/libexec/gnubin" ] && export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # pnpm
 export PNPM_HOME="/Users/mvelzel/Library/pnpm"
 case ":$PATH:" in
